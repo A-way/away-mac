@@ -20,6 +20,12 @@
 		A58646FB2041473D003F813B /* AwayPaddingTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A58646FA2041473D003F813B /* AwayPaddingTextFieldCell.m */; };
 		A58646FE20414957003F813B /* AwayRuleTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58646FD20414957003F813B /* AwayRuleTableCellView.m */; };
 		A5884A1C2134EC5600372535 /* AwaySpinningAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A5884A1B2134EC5600372535 /* AwaySpinningAnimation.m */; };
+		A5F9050C22F8105B003F7884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F9050B22F8105B003F7884 /* AppDelegate.m */; };
+		A5F9050E22F8105C003F7884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F9050D22F8105C003F7884 /* Assets.xcassets */; };
+		A5F9051122F8105C003F7884 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F9050F22F8105C003F7884 /* MainMenu.xib */; };
+		A5F9051422F8105C003F7884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F9051322F8105C003F7884 /* main.m */; };
+		A5F9051C22F81124003F7884 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F9051B22F81124003F7884 /* ServiceManagement.framework */; };
+		A5F9051D22F822F9003F7884 /* AwayLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5F9050822F8105B003F7884 /* AwayLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,19 @@
 			remoteInfo = Away;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5F9051922F810D6003F7884 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				A5F9051D22F822F9003F7884 /* AwayLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A524FAA4212E8C23002609FB /* AwaySettingsWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwaySettingsWindowController.h; sourceTree = "<group>"; };
@@ -65,6 +84,15 @@
 		A58646FD20414957003F813B /* AwayRuleTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwayRuleTableCellView.m; sourceTree = "<group>"; };
 		A5884A1A2134EC5600372535 /* AwaySpinningAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwaySpinningAnimation.h; sourceTree = "<group>"; };
 		A5884A1B2134EC5600372535 /* AwaySpinningAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwaySpinningAnimation.m; sourceTree = "<group>"; };
+		A5F9050822F8105B003F7884 /* AwayLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwayLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F9050A22F8105B003F7884 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5F9050B22F8105B003F7884 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5F9050D22F8105C003F7884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5F9051022F8105C003F7884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A5F9051222F8105C003F7884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F9051322F8105C003F7884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5F9051522F8105C003F7884 /* AwayLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AwayLauncher.entitlements; sourceTree = "<group>"; };
+		A5F9051B22F81124003F7884 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F9051C22F81124003F7884 /* ServiceManagement.framework in Frameworks */,
 				A524FAAC212FD9B2002609FB /* QuartzCore.framework in Frameworks */,
 				A524FAAA212FB1F7002609FB /* libaway.a in Frameworks */,
 			);
@@ -91,6 +120,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5F9050522F8105B003F7884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A58646C520413CB5003F813B /* Away */,
+				A5F9050922F8105B003F7884 /* AwayLauncher */,
 				A58646C420413CB5003F813B /* Products */,
 				A5BA04C5208AEA4B00FA7504 /* Frameworks */,
 			);
@@ -109,6 +146,7 @@
 				A58646C320413CB5003F813B /* Away.app */,
 				A58646D620413CB5003F813B /* AwayTests.xctest */,
 				A58646E120413CB5003F813B /* AwayUITests.xctest */,
+				A5F9050822F8105B003F7884 /* AwayLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,10 +181,25 @@
 		A5BA04C5208AEA4B00FA7504 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5F9051B22F81124003F7884 /* ServiceManagement.framework */,
 				A524FAAB212FD9B2002609FB /* QuartzCore.framework */,
 				A524FAA9212FB1F7002609FB /* libaway.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5F9050922F8105B003F7884 /* AwayLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9050A22F8105B003F7884 /* AppDelegate.h */,
+				A5F9050B22F8105B003F7884 /* AppDelegate.m */,
+				A5F9050D22F8105C003F7884 /* Assets.xcassets */,
+				A5F9050F22F8105C003F7884 /* MainMenu.xib */,
+				A5F9051222F8105C003F7884 /* Info.plist */,
+				A5F9051322F8105C003F7884 /* main.m */,
+				A5F9051522F8105C003F7884 /* AwayLauncher.entitlements */,
+			);
+			path = AwayLauncher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +212,7 @@
 				A58646BF20413CB5003F813B /* Sources */,
 				A58646C020413CB5003F813B /* Frameworks */,
 				A58646C120413CB5003F813B /* Resources */,
+				A5F9051922F810D6003F7884 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -205,6 +259,23 @@
 			productReference = A58646E120413CB5003F813B /* AwayUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A5F9050722F8105B003F7884 /* AwayLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5F9051822F8105C003F7884 /* Build configuration list for PBXNativeTarget "AwayLauncher" */;
+			buildPhases = (
+				A5F9050422F8105B003F7884 /* Sources */,
+				A5F9050522F8105B003F7884 /* Frameworks */,
+				A5F9050622F8105B003F7884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwayLauncher;
+			productName = AwayLauncher;
+			productReference = A5F9050822F8105B003F7884 /* AwayLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,6 +304,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = A58646C220413CB5003F813B;
 					};
+					A5F9050722F8105B003F7884 = {
+						CreatedOnToolsVersion = 10.3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A58646BE20413CB5003F813B /* Build configuration list for PBXProject "Away" */;
@@ -251,6 +326,7 @@
 				A58646C220413CB5003F813B /* Away */,
 				A58646D520413CB5003F813B /* AwayTests */,
 				A58646E020413CB5003F813B /* AwayUITests */,
+				A5F9050722F8105B003F7884 /* AwayLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -278,6 +354,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F9050622F8105B003F7884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F9050E22F8105C003F7884 /* Assets.xcassets in Resources */,
+				A5F9051122F8105C003F7884 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +397,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5F9050422F8105B003F7884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F9051422F8105C003F7884 /* main.m in Sources */,
+				A5F9050C22F8105B003F7884 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -332,6 +426,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				A58646CC20413CB5003F813B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A5F9050F22F8105C003F7884 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5F9051022F8105C003F7884 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -543,6 +645,43 @@
 			};
 			name = Release;
 		};
+		A5F9051622F8105C003F7884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = AwayLauncher/AwayLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AwayLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "A-way.AwayLauncher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A5F9051722F8105C003F7884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = AwayLauncher/AwayLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AwayLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "A-way.AwayLauncher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,6 +717,15 @@
 			buildConfigurations = (
 				A58646F120413CB5003F813B /* Debug */,
 				A58646F220413CB5003F813B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5F9051822F8105C003F7884 /* Build configuration list for PBXNativeTarget "AwayLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5F9051622F8105C003F7884 /* Debug */,
+				A5F9051722F8105C003F7884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

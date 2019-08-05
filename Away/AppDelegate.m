@@ -3,7 +3,7 @@
 #import "AppDelegate.h"
 #import "AwayViewController.h"
 #import "AwaySettingsWindowController.h"
-
+#import <ServiceManagement/ServiceManagement.h>
 
 
 @interface AppDelegate ()
@@ -37,6 +37,8 @@
     } else {
         away_start();
     }
+    
+    [self setupAppAutoLaunch];
 }
 
 
@@ -51,6 +53,15 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+- (void)setupAppAutoLaunch {
+    NSString *const kLauncherId = @"A-way.AwayLauncher";
+    NSString *const kKillLaucher = @"killLauncher";
+    
+    SMLoginItemSetEnabled((__bridge CFStringRef)(kLauncherId), YES);
+    NSString *appId = NSBundle.mainBundle.bundleIdentifier;
+    [NSDistributedNotificationCenter.defaultCenter postNotificationName:kKillLaucher object:appId];
 }
 
 @end
