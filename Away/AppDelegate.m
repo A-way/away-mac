@@ -6,6 +6,29 @@
 #import <ServiceManagement/ServiceManagement.h>
 
 
+@interface NSImage (Resize)
+
+- (NSImage *)resize:(CGSize)size;
+
+@end
+
+@implementation NSImage (Resize)
+
+- (NSImage *)resize:(CGSize)size {
+    CGSize originSize = self.size;
+    [self setSize:size];
+    NSImage *result = [[NSImage alloc] initWithSize:size];
+    [result lockFocus];
+    [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    [self drawAtPoint:NSZeroPoint fromRect:rect operation:NSCompositingOperationCopy fraction:1.0];
+    [result unlockFocus];
+    [self setSize:originSize];
+    return result;
+}
+
+@end
+
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
@@ -18,9 +41,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    NSImage *icon = [NSApp applicationIconImage];
+    NSImage *icon = [[NSApp applicationIconImage] resize:CGSizeMake(16, 16)];
 //    icon.template = YES;
-    [icon setSize:NSMakeSize(16, 16)];
     [self.statusItem setImage:icon];
     self.statusItem.action = @selector(togglePopover:);
     
@@ -40,7 +62,6 @@
     
     [self setupAppAutoLaunch];
 }
-
 
 - (IBAction)togglePopover:(id)sender {
     if ([self.popover isShown]) {
@@ -65,3 +86,4 @@
 }
 
 @end
+
